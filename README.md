@@ -14,9 +14,10 @@ Below are some screenshots of the app in action:
 
 ### Homepage
 
-![Homepage](lib/images/homepage.png)
+![Hompage](lib/images/todo_home.png)
 
 *The homepage displays your current to-do list and allows you to manage your tasks easily.*
+
 
 ### Add To-Do
 
