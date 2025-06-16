@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo/utils/my_button.dart';
+import 'package:nusiwomawor/utils/my_button.dart';
 
 class DialogBox extends StatelessWidget {
   // variable
@@ -17,7 +17,7 @@ class DialogBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Colors.yellow,
+      backgroundColor: Colors.yellow[200],
       content: SizedBox(
         height: 120,
         child: Column(
@@ -36,10 +36,18 @@ class DialogBox extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 //save button
-                MyButton(name: "Save", onPressed: onSave),
+                MyButton(
+                  name: "Save",
+                  onPressed: onSave,
+                  buttonColor: Colors.green,
+                ),
                 SizedBox(width: 10),
                 // cancel button
-                MyButton(name: "Cancel", onPressed: onCancel),
+                MyButton(
+                  name: "Cancel",
+                  onPressed: onCancel,
+                  buttonColor: Colors.redAccent,
+                ),
               ],
             ),
           ],

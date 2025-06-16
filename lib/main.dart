@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:todo/todo_page.dart';
+import 'package:nusiwomawor/todo_page.dart';
 
 void main() async {
   // Initialize Hive
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'TO DO APP',
+      title: 'NUSIWORMAWOR - TODO',
       home: const TODO(),
       theme: ThemeData(primaryColor: Colors.yellow),
     );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import 'package:todo/db/db.dart';
-import 'package:todo/utils/dialog_box.dart';
-import 'package:todo/utils/todo_tile.dart';
+import 'package:nusiwomawor/db/db.dart';
+import 'package:nusiwomawor/utils/dialog_box.dart';
+import 'package:nusiwomawor/utils/todo_tile.dart';
 
 class TODO extends StatefulWidget {
   const TODO({super.key});
@@ -62,6 +62,9 @@ class _TODOState extends State<TODO> {
   // save newTask
   void saveNewTask() {
     setState(() {
+      if (controller.text.isEmpty || controller.text.length < 4) {
+        return; // Do not add empty tasks
+      }
       db.toDoList.add([controller.text, false]);
       Navigator.of(context).pop();
       controller.clear();
@@ -74,7 +77,7 @@ class _TODOState extends State<TODO> {
     return Scaffold(
       backgroundColor: Colors.yellow[200],
       appBar: AppBar(
-        title: Text('TO DO'),
+        title: Text('NUSIWOMAWOR - TODO'),
         centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.yellow,
